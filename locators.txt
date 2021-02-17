@@ -1,0 +1,47 @@
+#HomePage
+HomePage.link.EnterButton = ".//a[@href = '/login']"
+HomePage.input.LoginWithEmail = ".//input[@id = 'user']"
+HomePage.input.PasswordForLogin = ".//input[@id = 'password']"
+HomePage.input.EnterButton =".//input[@type = 'submit']"
+HomePage.div.ErrorMessage = ".//*[@id = 'error']"
+HomePage.input.EnterButtonAtlassan = ".//input[@id = 'login']"
+
+#IdLoginPage
+IdLoginPage.input.EnterPassword = ".//input[@id = 'password']"
+IdLoginPage.button.SubmitButton = ".//button[@id = 'login-submit']"
+
+#CreateFirstTeam
+CreateFirstTeam.h1.HelloUser = ".//h1[@data-test-id = 'moonshot-welcome-heading']"
+CreateFirstTeam.button.Continue = ".//button[@data-test-id = 'moonshot-continue-button']"
+CreateFirstTeam.div.CreateTeamNameError = ".//div[@id='moonshotCreateTeamNameError']"
+CreateFirstTeam.div.TeamTypeError = ".//div[@ data-test-id='moonshot-team-type-error']"
+CreateFirstTeam.input.CreateTeamName = ".//input[@id='moonshotCreateTeam']"
+CreateFirstTeam.div.TeamType = "//div[contains(text(),'Инженерия/ИТ')]"
+CreateFirstTeam.button.TryFree30days".//button[@data-test-id='moonshot-try-bc-free-trial']"
+CreateFirstTeam.button.SuccessButon = ".//button[@data-test-id='moonshot-success-button']"
+
+
+#TeamAccount
+TeamAccount.link.CheckSettingsLink = ".//a [@href='/dreamteam05147030/account']"
+TeamAccount.button.UserAccount = ".//button [@ data-test-id='header-member-menu-button']"
+TeamAccount.button.ExitButton".//button [@data-test-id='header-member-menu-logout']"
+TeamAccount.input.Search = ".//input[@data-test-id='header-search-input']"
+
+ExitFromAccount.button.Exit = ".//button[@ id='logout-submit']"
+
+
+#TeamDeletion
+TeamDeletion.link.ToUserSettings = ".//a[contains(@href,'/account') and contains(@class,'header')]"
+TeamDeletion.link.DeleteTeam = ".//a[@href = '#' and contains(@class,'quiet')]"
+TeamDeletion.input.DeleteForEver =  ".//input [@type='submit']"
+
+#CreateTeam
+CreateTeam.button.CreateTeamButton = ".//button[@data-test-id='home-navigation-create-team-button']"
+CreateTeam.input.TeamName = ".//input[@data-test-id='header-create-team-name-input']"
+CreateTeam.div.TeamType = ".//div[contains(text(),'Инженерия/ИТ')]"
+CreateTeam.button.Submit = ".//button[@type = 'submit']"
+CreateTeam.link.DoThisLater = ".//a[@data-test-id='show-later-button']"
+CreateTeam.h1.NameOfTeam = ".//h1 [contains(text(),'DreamTeam')]"
+
+
+
