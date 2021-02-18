@@ -1,5 +1,6 @@
 #HomePage
 HomePage.link.EnterButton = ".//a[@href = '/login']"
+
 HomePage.input.LoginWithEmail = ".//input[@id = 'user']"
 HomePage.input.PasswordForLogin = ".//input[@id = 'password']"
 HomePage.input.EnterButton =".//input[@type = 'submit']"
