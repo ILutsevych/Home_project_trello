@@ -19,6 +19,7 @@ public class BaseTest {
     protected LoggedOutPage loggedOutPage;
     protected TeamPage teamPage;
     protected TeamAccount teamAccount;
+    protected BoardPage boardPage;
 
     @Before
     public void setUp(){
@@ -34,6 +35,7 @@ public class BaseTest {
         loggedOutPage = new LoggedOutPage(webDriver);
         teamPage = new TeamPage(webDriver);
         teamAccount = new TeamAccount(webDriver);
+        boardPage = new BoardPage(webDriver);
 
 
 //        myProfilePage = new MyProfilePage(webDriver);

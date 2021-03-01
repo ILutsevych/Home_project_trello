@@ -20,7 +20,7 @@ public class HomePage extends ParentPage {
     private WebElement createTeamButton;
     @FindBy(xpath = ".//input[@data-test-id='header-create-team-name-input']")
     private WebElement inputname;
-    @FindBy(xpath = ".//div[contains(text(),'Инженерия/ИТ')]")
+    @FindBy(xpath = ".//*[contains(text(),'Инженерия/ИТ')]")
     private WebElement teamTypeEngineering;
     @FindBy(xpath = ".//*[contains(text(),'Выбрать')]")
     private WebElement teamSelect;

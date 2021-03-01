@@ -76,6 +76,11 @@ public class TeamPage extends ParentPage {
         }
     }
     public void clickOnMenu(){
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         clickOnElement(menuButton);
         logger.info("Button Menu was clicked");
     }

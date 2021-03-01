@@ -70,6 +70,9 @@ TeamDeletion.link.ToUserSettings = ".//a[contains(@href,'/account') and contains
 TeamDeletion.link.DeleteTeam = ".//a[@href = '#' and contains(@class,'quiet')]"
 TeamDeletion.input.DeleteForEver =  ".//input [@type='submit']"
 
+#Boards
+Boards.button.Create = ".//button[@data-test-id='header-create-menu-button']"
+Boards.button.CreateNewBoardFromTemplate = ".//span[contains(text(),'Создайте доску')]"
 
 
 
