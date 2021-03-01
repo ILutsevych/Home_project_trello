@@ -1,15 +1,59 @@
 #HomePage
 HomePage.link.EnterButton = ".//a[@href = '/login']"
 
-HomePage.input.LoginWithEmail = ".//input[@id = 'user']"
-HomePage.input.PasswordForLogin = ".//input[@id = 'password']"
-HomePage.input.EnterButton =".//input[@type = 'submit']"
-HomePage.div.ErrorMessage = ".//*[@id = 'error']"
-HomePage.input.EnterButtonAtlassan = ".//input[@id = 'login']"
+HomePage.*.MyProfileId = ".//*[contains(text(),'trellotest681@gmail.com')]"
+HomePage.button.UserAccount = ".//button [@ data-test-id='header-member-menu-button']"
+HomePage.button.ExitButton = ".//button [@data-test-id='header-member-menu-logout']"
+HomePage.ExitFromAccount.button.Exit = ".//button[@ id='logout-submit']"
+HomePage.button.CreateTeamButton = ".//button[@data-test-id='home-navigation-create-team-button']"
+HomePage.input.TeamName = ".//input[@data-test-id='header-create-team-name-input']"
+HomePage.input.TeamSelect = ".//*[contains(text(),'Выбрать')]"
+HomePage.div.TeamType = ".//div[contains(text(),'Инженерия/ИТ')]"
+HomePage.button.Submit = ".//button[@type = 'submit']"
+HomePage.link.DoThisLater = ".//a[@data-test-id='show-later-button']"
+HomePage.h1.NameOfTeam = ".//h1 [contains(text(),'DreamTeam')]"
+HomePage.button.CloseFormForTeamCreate = "//button[@aria-label='Закрыть' and contains(@class,'2b_HpRl1Tyl1YK')]"
+HomePage.text = ".//*[contains(text(), 'Создайте команду')]"
+
+
+#LoggedOut
+LoggedOut.h1.Text = ".//h1[contains(text(),'Спасибо, что используете Trello.')]"
+LoggedOut.href.LoginButton = ".//a[@href='/login']"
+
+#TeamPage
+TeamPage.a.HomeIcon = ".//a [@data-test-id='header-home-button']"
+TeamPage.span.FindTeam = ".//span[contains(text(),'DreamTeam') and @data-test-id='home-team-tab-name']"
+TeamPage.button.Settings = ".//*[contains(text(),'Настройки')]"
+TeamPage.*.createABoard = ".//*[contains(text(),'Создать доску')]"
+TeamPage.input.HeaderForNewBoard = ".//input[@data-test-id='create-board-title-input']"
+TeamPage.button.CreateANewBoard = ".//button[@data-test-id='create-board-submit-button']"
+TeamPage.button.select = "//button[contains(text(),'Приватная')]"
+TeamPage.span.public = ".//span[contains(text(),'Публичная')]"
+TeamPage.button.doBoardPublic = ".//button[contains(text(),'Да, сделать доску публичной')]"
+TeamPage.h1.checkHeader = ".//h1[contains(text(),'DreamBoard')]"
+TeamPage.span.Menu = ".//span[ contains(text(),'Меню')]"
+TeamPage.a.CloseBoard = ".//a[ contains(text(),'Закрыть доску')] "
+TeamPage.input.CloseBoard2 = ".//input[@type='submit' and @value = 'Закрыть']"
+TeamPage.a.DeleteBoardForever = ".//a[contains(text(), 'Безвозвратное удаление доски…')]"
+TeamPage.input.DeleteBoardForever2 = ".//input[@value='Удалить']"
+TeamPage.h1.CouldNotFindBoard = ".//h1[contains(text(),'Доска не найдена.')]"
+TeamPage.*.ButtonMore = ".//*[contains(text(),'Ещё')]"
+
+#TeamAccount
+TeamAccount.link.DeleteTeam = ".//a[@href = '#' and contains(@class,'quiet')]"
+TeamAccount.input.DeleteForEver =  ".//input [@type='submit']"
+
 
 #IdLoginPage
 IdLoginPage.input.EnterPassword = ".//input[@id = 'password']"
 IdLoginPage.button.SubmitButton = ".//button[@id = 'login-submit']"
+IdLoginPage.input.LoginWithEmail = ".//input[@id = 'user']"
+IdLoginPage.input.PasswordForLogin = ".//input[@id = 'password']"
+IdLoginPage.input.EnterButton =".//input[@type = 'submit']"
+IdLoginPage.div.ErrorMessage = ".//*[@id = 'error']"
+IdLoginPage.input.EnterButtonAtlassian = ".//input[@id = 'login']"
+
+
 
 #CreateFirstTeam
 CreateFirstTeam.h1.HelloUser = ".//h1[@data-test-id = 'moonshot-welcome-heading']"
@@ -21,28 +65,12 @@ CreateFirstTeam.div.TeamType = "//div[contains(text(),'Инженерия/ИТ')
 CreateFirstTeam.button.TryFree30days".//button[@data-test-id='moonshot-try-bc-free-trial']"
 CreateFirstTeam.button.SuccessButon = ".//button[@data-test-id='moonshot-success-button']"
 
-
-#TeamAccount
-TeamAccount.link.CheckSettingsLink = ".//a [@href='/dreamteam05147030/account']"
-TeamAccount.button.UserAccount = ".//button [@ data-test-id='header-member-menu-button']"
-TeamAccount.button.ExitButton".//button [@data-test-id='header-member-menu-logout']"
-TeamAccount.input.Search = ".//input[@data-test-id='header-search-input']"
-
-ExitFromAccount.button.Exit = ".//button[@ id='logout-submit']"
-
-
 #TeamDeletion
 TeamDeletion.link.ToUserSettings = ".//a[contains(@href,'/account') and contains(@class,'header')]"
 TeamDeletion.link.DeleteTeam = ".//a[@href = '#' and contains(@class,'quiet')]"
 TeamDeletion.input.DeleteForEver =  ".//input [@type='submit']"
 
-#CreateTeam
-CreateTeam.button.CreateTeamButton = ".//button[@data-test-id='home-navigation-create-team-button']"
-CreateTeam.input.TeamName = ".//input[@data-test-id='header-create-team-name-input']"
-CreateTeam.div.TeamType = ".//div[contains(text(),'Инженерия/ИТ')]"
-CreateTeam.button.Submit = ".//button[@type = 'submit']"
-CreateTeam.link.DoThisLater = ".//a[@data-test-id='show-later-button']"
-CreateTeam.h1.NameOfTeam = ".//h1 [contains(text(),'DreamTeam')]"
+
 
 
 

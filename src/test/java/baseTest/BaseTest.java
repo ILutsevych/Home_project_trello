@@ -6,8 +6,7 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import pages.HomePage;
-import pages.LoginPage;
+import pages.*;
 
 import java.io.File;
 import java.util.concurrent.TimeUnit;
@@ -17,6 +16,9 @@ public class BaseTest {
     protected Logger logger = Logger.getLogger(getClass());
     protected LoginPage loginPage;
     protected HomePage homePage;
+    protected LoggedOutPage loggedOutPage;
+    protected TeamPage teamPage;
+    protected TeamAccount teamAccount;
 
     @Before
     public void setUp(){
@@ -29,6 +31,9 @@ public class BaseTest {
         logger.info("Browser was opened");
         loginPage = new LoginPage(webDriver);
         homePage = new HomePage(webDriver);
+        loggedOutPage = new LoggedOutPage(webDriver);
+        teamPage = new TeamPage(webDriver);
+        teamAccount = new TeamAccount(webDriver);
 
 
 //        myProfilePage = new MyProfilePage(webDriver);

@@ -5,15 +5,20 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class LoginPage extends ParentPage {
 
     @FindBy(xpath = ".//input[@id = 'user']")
     private WebElement inputlogin;
-    @FindBy(xpath = ".//input[@id = 'password']")
+    @FindBy(xpath = ".//input[@id='password']")
     private WebElement inputpass;
     @FindBy(xpath = ".//input[@type = 'submit']")
     private WebElement submitButton;
+    @FindBy(xpath = ".//input[@id = 'login']")
+    private WebElement atlassianButton;
+    @FindBy(xpath = ".//button[@id = 'login-submit']")
+    private WebElement submitButtonWithPass;
 
     public LoginPage(WebDriver webDriver) {
         super(webDriver);
@@ -24,8 +29,14 @@ public class LoginPage extends ParentPage {
         logger.info("Log In is entered");
     }
     public void enterPasswordSignIn(String pass){
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        webDriverWait10.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//input[@id='password']")));
         enterTextIntoElement(inputpass,pass);
-        logger.info("Pass In is entered");
+        logger.info("Pass is entered");
     }
     public LoginPage checkIsRedirectedOnLoginPage(){
         Assert.assertEquals("Invalid page", "https://trello.com/login",webDriver.getCurrentUrl());
@@ -35,17 +46,21 @@ public class LoginPage extends ParentPage {
         clickOnElement(submitButton);
         logger.info("Login button is clicked");
     }
+    public void clickButtonEnterWithPass(){
+        clickOnElement(submitButtonWithPass);
+        logger.info("Log in button is clicked");
+    }
 
-    public void fillLoginFormAndSubmit(String login,String pass){
+    public void fillLoginFormAndSubmit(String login, String pass){
         checkIsRedirectedOnLoginPage();
         enterLoginSignIn(login);
+        clickButtonLogInWithAtlassian();
         enterPasswordSignIn(pass);
-        clickButtonLogIn();
+        clickButtonEnterWithPass();
     }
     public boolean isAlertErrorVisible() {
         try{
-            waitForSeconds(2);
-        return webDriver.findElement(By.xpath(".//*[@id = 'error']")).isDisplayed();
+            return webDriverWait10.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//*[@id = 'error']"))).isDisplayed();
         }catch (Exception e){
             return false;
         }
@@ -54,12 +69,14 @@ public class LoginPage extends ParentPage {
 
     public boolean buttonLogInIsVisible(){
         try{
-            return webDriver.findElement(By.xpath(".//input[@type = 'submit']")).isDisplayed();
+            return webDriverWait10.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//input[@type = 'submit']"))).isDisplayed();
         }catch (Exception e){
             return false;
         }
     }
-
-
+    public void clickButtonLogInWithAtlassian(){
+        clickOnElement(atlassianButton);
+        logger.info("Log in with Atlassian button is clicked");
+    }
 
 }
